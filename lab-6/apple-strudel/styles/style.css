@@ -1,0 +1,127 @@
+/* RESET */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, h1, h2, h3, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Шрифт */
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+/* Центральный контейнер */
+.page {
+  width: 60%;
+  background: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 900px) {
+  .page {
+    width: 90%;
+  }
+}
+
+/* ======= ШАПКА ======= */
+.hero {
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  display: block;
+}
+
+.hero__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ======= ИНФОПАНЕЛЬ ======= */
+.info-panel {
+  display: flex;
+  gap: 32px;
+  padding: 16px 48px 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.info-item:hover {
+  color: #333;
+  transform: translateY(-2px);
+}
+
+.info-icon img {
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+
+.info-item:hover img {
+  opacity: 1;
+}
+
+/* ======= ОСНОВНОЙ ТЕКСТ ======= */
+.content {
+  padding: 32px 48px 40px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.lead {
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin: 30px 0 12px;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  font-size: 16px;
+}
+
+ul, ol {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+.steps li {
+  margin-bottom: 12px;
+}
+
+.greeting {
+  margin-top: 20px;
+  font-style: italic;
+}
