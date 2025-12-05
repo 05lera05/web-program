@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №5 — Верушкина Валерия</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====================== HEADER (Вариант 2 + бургер) ====================== -->
+<header class="header-v2">
+
+    <!-- Бургер-меню -->
+    <button class="burger" id="burgerBtn">☰</button>
+
+    <div class="header-profile">
+        <img src="img/avatar.svg" alt="Верушкина Валерия" class="header-avatar">
+        <div class="header-info">
+            <div class="header-name">Верушкина Валерия</div>
+            <div class="header-role">ИСТ-33</div>
+        </div>
+    </div>
+
+    <nav class="header-nav">
+        <a href="#" class="active">Дом</a>
+        <a href="#">Команда</a>
+        <a href="#">Особенности</a>
+        <a href="#">Блог</a>
+        <a href="#">Контакт</a>
+    </nav>
+
+    <div class="header-actions">
+        <input class="header-search" type="text" placeholder="Поиск...">
+        <button class="header-icon">🔔</button>
+        <button class="header-icon">❤</button>
+        <button class="header-icon">⚙</button>
+    </div>
+</header>
+
+
+<!-- ====================== NAV (Вариант 3) ====================== -->
+<nav class="nav-v3" id="sideNav">
+    <div class="nav-profile">
+        <img src="img/avatar.svg" alt="Верушкина Валерия" class="nav-avatar">
+        <div class="nav-name">Верушкина Валерия</div>
+        <div class="nav-role">ИСТ-33</div>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-title">Информация</div>
+        <a href="#" class="nav-link">Аудитория <span class="nav-arrow">›</span></a>
+        <a href="#" class="nav-link">Посты <span class="nav-arrow">›</span></a>
+        <a href="#" class="nav-link">Расписание <span class="nav-arrow">›</span></a>
+        <a href="#" class="nav-link">Продвижать <span class="nav-arrow">›</span></a>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-title">Доход</div>
+        <a href="#" class="nav-link">Платежи <span class="nav-arrow">›</span></a>
+        <a href="#" class="nav-link">Отчёты <span class="nav-arrow">›</span></a>
+    </div>
+
+    <div class="nav-section">
+        <div class="nav-title">Действия</div>
+        <a href="#" class="nav-link">Профиль</a>
+        <a href="#" class="nav-link">Выйти</a>
+    </div>
+</nav>
+
+
+<!-- ====================== CONTENT ====================== -->
+<main class="main-content">
+    <h1>Практическая работа №5</h1>
+    <p>
+        Данный документ содержит структуру HTML5, разработанную в соответствии с вариантом №2.
+        Реализованы семантические элементы: header, nav, main, footer.
+    </p>
+</main>
+
+
+<!-- ====================== FOOTER (Вариант 2) ====================== -->
+<footer class="footer-v2">
+    <div class="footer-content">
+
+        <div class="footer-column">
+            <h3>Информация</h3>
+            <a href="#">Новости</a>
+            <a href="#">Проекты</a>
+            <a href="#">Команда</a>
+            <a href="#">Контакты</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Соцсети</h3>
+            <a href="#">Instagram</a>
+            <a href="#">VK</a>
+            <a href="#">Telegram</a>
+            <a href="#">GitHub</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Автор страницы</h3>
+            <div class="footer-profile">
+                <img src="img/avatar.svg" class="footer-avatar" alt="Верушкина Валерия">
+                <div>
+                    <div class="footer-name">Верушкина Валерия</div>
+                    <div class="footer-role">Студентка группы ИСТ-33</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-social-icons">
+            <button class="f-icon">●</button>
+            <button class="f-icon">●</button>
+            <button class="f-icon">●</button>
+        </div>
+
+        <div class="footer-copy">© Все права защищены. 2025</div>
+    </div>
+</footer>
+
+
+<!-- ====================== JS ====================== -->
+<script>
+    const burger = document.getElementById("burgerBtn");
+    const nav = document.getElementById("sideNav");
+
+    burger.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+
+</body>
+</html>

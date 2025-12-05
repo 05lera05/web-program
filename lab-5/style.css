@@ -1,0 +1,270 @@
+/* ================== ПАСТЕЛЬНЫЙ РЕДИЗАЙН (вариант A) ================== */
+
+/* ОБЩИЕ НАСТРОЙКИ */
+body {
+    margin: 0;
+    background: #FAF9F6; /* мягкий молочный */
+    font-family: "Segoe UI", sans-serif;
+    color: #3A3A3A;
+}
+
+h1, h2, h3 {
+    color: #3A3A3A;
+}
+
+a {
+    transition: 0.2s;
+}
+
+/* ================== HEADER ================== */
+
+.header-v2 {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px;
+    gap: 40px;
+    position: relative;
+    z-index: 3000;
+    border-radius: 0 0 18px 18px;
+}
+
+/* Бургер */
+.burger {
+    font-size: 26px;
+    padding: 4px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7A7A7A;
+    transition: 0.2s;
+}
+
+.burger:hover {
+    color: #3A3A3A;
+}
+
+/* Профиль в Header */
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #A8D8F0;
+}
+
+.header-info .header-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.header-info .header-role {
+    font-size: 13px;
+    color: #7A7A7A;
+}
+
+/* Header навигация */
+.header-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #7A7A7A;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.header-nav a:hover {
+    color: #3A3A3A;
+    border-color: #A8D8F0;
+}
+
+.header-nav .active {
+    color: #3A3A3A;
+    border-color: #A8D8F0;
+}
+
+/* Поисковая строка */
+.header-search {
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 1px solid #DCE7EE;
+    width: 200px;
+    background: #F1F7FB;
+    transition: 0.2s;
+}
+
+.header-search:focus {
+    border-color: #A8D8F0;
+    outline: none;
+    background: white;
+    box-shadow: 0 0 5px rgba(168, 216, 240, 0.5);
+}
+
+/* Иконки */
+.header-icon {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #7A7A7A;
+    transition: 0.2s;
+}
+
+.header-icon:hover {
+    color: #3A3A3A;
+}
+
+/* ================== NAV (выезжающее меню) ================== */
+
+.nav-v3 {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #F1F7FB; /* нежно-голубой */
+    border-right: 1px solid #E5E5E5;
+    padding: 24px 20px;
+    transition: 0.3s ease;
+    z-index: 2000;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.05);
+}
+
+.nav-v3.open {
+    left: 0;
+}
+
+.nav-profile {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.nav-avatar {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: 3px solid #A8D8F0;
+    object-fit: cover;
+}
+
+.nav-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-role {
+    font-size: 13px;
+    color: #7A7A7A;
+}
+
+/* Разделы */
+.nav-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #7A7A7A;
+    margin-bottom: 8px;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    color: #3A3A3A;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+.nav-link:hover {
+    background: #E3F2FB;
+}
+
+.nav-arrow {
+    color: #7A7A7A;
+}
+
+/* ================== MAIN ================== */
+
+.main-content {
+    padding: 40px;
+}
+
+/* ================== FOOTER ================== */
+
+.footer-v2 {
+    background: #FFFFFF;
+    padding: 30px 40px;
+    border-top: 1px solid #E5E5E5;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.04);
+    border-radius: 18px 18px 0 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+.footer-column h3 {
+    color: #3A3A3A;
+}
+
+.footer-column a {
+    color: #7A7A7A;
+    text-decoration: none;
+    display: block;
+    margin: 4px 0;
+}
+
+.footer-column a:hover {
+    color: #3A3A3A;
+    transform: translateX(6px);
+}
+
+/* Автор */
+.footer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #A8D8F0;
+}
+
+.footer-name {
+    font-weight: 600;
+}
+
+.footer-role {
+    color: #7A7A7A;
+}
+
+/* Низ футера */
+.footer-bottom {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: #E3F2FB;
+    cursor: pointer;
+}
+
+.f-icon:hover {
+    background: #A8D8F0;
+}
+
+/* ================== КОНЕЦ РЕДИЗАЙНА ================== */
