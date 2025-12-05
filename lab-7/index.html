@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа 7 – Тарифные планы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page" data-current-view="desktop" data-billing="monthly">
+    <header class="header">
+        <div class="logo">MyService</div>
+
+        <nav class="nav">
+            <!-- Элементы управления представлением (по заданию – в Nav) -->
+            <a href="#" class="nav-link nav-link--view is-active" data-view="desktop">
+                Desktop
+            </a>
+            <a href="#" class="nav-link nav-link--view" data-view="mobile">
+                Mobile
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Блок для выбора периодичности оплаты -->
+        <section class="billing">
+            <h1 class="page-title">Тарифные планы</h1>
+            <p class="page-subtitle">
+                Выберите подходящий тариф для вашего бизнеса
+            </p>
+
+            <div class="billing-toggle">
+                <button class="billing-btn is-active" data-billing="monthly">
+                    Ежемесячно
+                </button>
+                <button class="billing-btn" data-billing="yearly">
+                    Ежегодно
+                </button>
+            </div>
+
+            <p class="billing-hint">
+                При оплате за год действует скидка 20%
+            </p>
+        </section>
+
+        <!-- Представление: Desktop -->
+        <section class="pricing pricing-desktop" data-view-section="desktop">
+            <div class="plans-grid">
+                <article class="plan-card">
+                    <h2 class="plan-title">Старт</h2>
+                    <p class="plan-price">
+                        <span class="price price--monthly">250 ₽ / месяц</span>
+                        <span class="price price--yearly">2 400 ₽ / год</span>
+                    </p>
+                    <p class="plan-desc">
+                        Подходит для небольших проектов и личных сайтов.
+                    </p>
+                    <ul class="plan-list">
+                        <li>До 5 проектов</li>
+                        <li>10 ГБ облачного хранилища</li>
+                        <li>Базовая поддержка по email</li>
+                    </ul>
+                    <button class="plan-btn">Выбрать тариф</button>
+                </article>
+
+                <article class="plan-card plan-card--popular">
+                    <div class="plan-badge">Популярный выбор</div>
+                    <h2 class="plan-title">Профессиональный</h2>
+                    <p class="plan-price">
+                        <span class="price price--monthly">800 ₽ / месяц</span>
+                        <span class="price price--yearly">7 500 ₽ / год</span>
+                    </p>
+                    <p class="plan-desc">
+                        Для фрилансеров и небольших команд.
+                    </p>
+                    <ul class="plan-list">
+                        <li>До 20 проектов</li>
+                        <li>50 ГБ облачного хранилища</li>
+                        <li>Приоритетная поддержка</li>
+                        <li>Расширенная аналитика</li>
+                    </ul>
+                    <button class="plan-btn plan-btn--accent">Оформить</button>
+                </article>
+
+                <article class="plan-card">
+                    <h2 class="plan-title">Предприятие</h2>
+                    <p class="plan-price">
+                        <span class="price price--monthly">2 000 ₽ / месяц</span>
+                        <span class="price price--yearly">18 000 ₽ / год</span>
+                    </p>
+                    <p class="plan-desc">
+                        Для крупных компаний и интенсивной нагрузки.
+                    </p>
+                    <ul class="plan-list">
+                        <li>Неограниченное количество проектов</li>
+                        <li>Безлимитное хранилище</li>
+                        <li>Личный менеджер</li>
+                        <li>Поддержка 24/7</li>
+                    </ul>
+                    <button class="plan-btn">Связаться с отделом продаж</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Представление: Mobile -->
+        <section class="pricing pricing-mobile" data-view-section="mobile">
+            <article class="plan-card plan-card--mobile">
+                <h2 class="plan-title">Старт</h2>
+                <p class="plan-price">
+                    <span class="price price--monthly">250 ₽ / месяц</span>
+                    <span class="price price--yearly">2 400 ₽ / год</span>
+                </p>
+                <p class="plan-desc">
+                    Идеально для начала работы с сервисом.
+                </p>
+
+                <ul class="plan-list">
+                    <li>До 5 проектов</li>
+                    <li>10 ГБ облачного хранилища</li>
+                    <li>Базовая поддержка по email</li>
+                </ul>
+
+                <button class="plan-btn plan-btn--accent">Купить сейчас</button>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Практическая работа 7. Выполнила Верушкина Валерия. Размещение и методы компоновки</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
