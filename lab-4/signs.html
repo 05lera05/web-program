@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дорожные знаки</title>
+
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .signs-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .sign-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 160px;
+        }
+
+        .sign-block img {
+            width: 120px;
+            cursor: pointer;
+        }
+
+        .sign-title {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        /* стили для всплывающих подсказок */
+        .ui-tooltip {
+            background: #ffffff;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 4px;
+            color: #000;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $(document).tooltip({
+                items: "img",
+                content: function () {
+                    let el = $(this);
+                    return el.data("hint"); // берём текст из data-hint
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<h1>Дорожные знаки</h1>
+
+<div class="signs-container">
+
+    <!-- Пример 10 знаков из архива -->
+    <div class="sign-block">
+        <img src="img/signs/1_1.svg" data-hint="Предупреждающий знак №1.1: Железнодорожный переезд без шлагбаума">
+        <div class="sign-title">1.1 Железнодорожный переезд</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/1_2.svg" data-hint="1.2 — Железнодорожный переезд со шлагбаумом">
+        <div class="sign-title">1.2 Переезд со шлагбаумом</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/1_3_1.svg" data-hint="1.3.1 — Однопутная железная дорога">
+        <div class="sign-title">1.3.1 Однопутная ж/д</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/1_11_1.svg" data-hint="1.11.1 — Крутой подъем">
+        <div class="sign-title">1.11.1 Подъем</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/1_16.svg" data-hint="1.16 — Скользкая дорога">
+        <div class="sign-title">1.16 Скользкая дорога</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/2_1.svg" data-hint="2.1 — Главная дорога">
+        <div class="sign-title">2.1 Главная дорога</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/2_4.svg" data-hint="2.4 — Уступите дорогу">
+        <div class="sign-title">2.4 Уступите дорогу</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/3_1.svg" data-hint="3.1 — Въезд запрещён">
+        <div class="sign-title">3.1 Въезд запрещён</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/3_2.svg" data-hint="3.2 — Движение запрещено">
+        <div class="sign-title">3.2 Движение запрещено</div>
+    </div>
+
+    <div class="sign-block">
+        <img src="img/signs/2_6.svg" data-hint="5.20 — Преимущество встречного движения">
+        <div class="sign-title">2.6 Преимущество встречного движения</div>
+    </div>
+
+</div>
+
+</body>
+</html>
