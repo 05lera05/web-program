@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWA QR Generator</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+  <h1>PWA генератор QR-кодов</h1>
+
+  <div class="container">
+    <div class="card">
+      <h2>Текст</h2>
+      <textarea id="textInput">Напиши здесь свой текст...</textarea>
+
+      <label>
+        Размер QR:
+        <input type="range" id="sizeRange" min="150" max="300" value="200">
+      </label>
+
+      <button id="saveBtn">Сохранить PNG</button>
+    </div>
+
+    <div class="card center">
+      <h2>QR-код</h2>
+      <div id="qr"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+
+</body>
+</html>
